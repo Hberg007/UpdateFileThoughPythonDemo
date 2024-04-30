@@ -78,9 +78,9 @@ For the first part of the algorithm, I opened the "allow_list.txt" file.
       
       Then, I assigned the string output of this method to the variable ip_addresses. 
 
-      In summary, this code reads the contents of the "allow_list.txt" file into a string format that allows me to later use 
+      In summary, this code reads the contents of the "allow_list.txt" file into a string format that allows me to later 
       
-      the string to organize and extract data in my Python program.
+      use the string to organize and extract data in my Python program.
 <br />
 <br />
 <h2> Convert the String Into a List:</h2>
@@ -128,11 +128,15 @@ To do this, I incorporated a for loop:
 The for loop in Python repeats code for a specified sequence. 
    
      
-      The overall purpose of the for loop in a Python algorithm like this is to apply specific code statements to all elements in a sequence. 
+      The overall purpose of the for loop in a Python algorithm like this is to apply specific code statements to all 
+      
+      elements in a sequence. 
       
       The for keyword starts the for loop. It is followed by the loop variable element and the keyword in. 
       
-      The keyword in indicates to iterate through the sequence ip_addresses and assign each value to the loop variable element. 
+      The keyword in indicates to iterate through the sequence ip_addresses and assign each value to the loop 
+      
+      variable element. 
 <br />
 <br />
 <h2> Remove IP Addresses That are on the Remove List:</h2>
@@ -146,13 +150,16 @@ Because there were not any duplicates in ip_addresses, I was able to use the fol
  <p align="center"> <img width="600" alt="image" src="https://github.com/Hberg007/UpdateFileThoughPythonDemo/assets/168477827/2ad35f62-31dc-4680-8e9d-17347c5edb20">
 <br />
 <br />
-       First, within my for loop, I created a conditional that evaluated whether or not the loop variable element was found in the ip_addresses list. 
+       
+          First, within my for loop, I created a conditional that evaluated whether or not the loop variable element 
+          
+          was found in the ip_addresses list. 
    
        I did this because applying .remove() to elements that were not found in ip_addresses would result in an error. 
 
-       Then, within that conditional, I applied .remove() to ip_addresses. I passed in the loop variable element as the argument so that each 
+       Then, within that conditional, I applied .remove() to ip_addresses. I passed in the loop variable element as the 
        
-       IP address that was in the remove_list would be removed from ip_addresses.
+       argument so that each IP address that was in the remove_list would be removed from ip_addresses.
 
 <br />
 <br />
@@ -170,11 +177,13 @@ As a final step in my algorithm, I needed to update the allow list file with the
        
         The .join() method combines all items in an iterable into a string. 
    
-        The .join() method is applied to a string containing characters that will separate the elements in the iterable once joined into a string. 
+        The .join() method is applied to a string containing characters that will separate the elements in the iterable 
         
-        In this algorithm, I used the .join() method to create a string from the list ip_addresses so that I could pass it in as an argument to 
+        once joined into a string. 
         
-        the .write() method when writing to the file "allow_list.txt". 
+        In this algorithm, I used the .join() method to create a string from the list ip_addresses so that I could pass 
+        
+        it in as an argument to the .write() method when writing to the file "allow_list.txt". 
         
         I used the string ("\n") as the separator to instruct Python to place each element on a new line. 
 <br />
@@ -198,13 +207,17 @@ As a final step in my algorithm, I needed to update the allow list file with the
 
         In this case I wanted to write the updated allow list as a string to the file "allow_list.txt". 
         
-        This way, the restricted content will no longer be accessible to any IP addresses that were removed from the allow list. 
+        This way, the restricted content will no longer be accessible to any IP addresses that were removed from the 
         
-        To rewrite the file, I appended the .write() function to the file object file that I identified in the with statement. 
+        allow list. 
         
-        I passed in the ip_addresses variable as the argument to specify that the contents of the file specified in the with statement should 
+        To rewrite the file, I appended the .write() function to the file object file that I identified in the 
         
-        be replaced with the data in this variable.
+        with statement. 
+        
+        I passed in the ip_addresses variable as the argument to specify that the contents of the file specified in the 
+        
+        with statement should be replaced with the data in this variable.
 <br />
 <br />
 <h2> Summary:
